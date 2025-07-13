@@ -1,0 +1,33 @@
+#weather {
+  padding: 40px 0;
+  .weather {
+      &--search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 160px;
+        input {
+          width: 350px;
+          border-radius: 10px;
+          border: none;
+          outline: none;
+          border: 1px solid black;
+          background: black;
+          padding: 5px 10px;
+          font-size: 22px;
+          color: white;
+          &::placeholder {
+            color: white;
+          }
+        }
+        button {
+          padding: 10px 15px;
+          border-radius: 10px;
+          border: none;
+          font-size: 16px;
+          background: blueviolet;
+          color: white;
+        }
+      }
+    }
+  }
