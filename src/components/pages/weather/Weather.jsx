@@ -26,8 +26,8 @@ const Weather = () => {
     }
   };
   useEffect(() => {
-    dispatch(getWeather("Bishkek"));
-  }, []);
+    dispatch(getWeather(query));
+  }, [query]); 
 
   return (
     <div id="weather">
@@ -41,7 +41,7 @@ const Weather = () => {
               onChange={(e) => setWeat(e.target.value)}
               onKeyDown={KeyDown}
             />
-            <button>Search</button>
+            <button onClick={() => setQuery(weat.trim())}>Search</button>
           </div>
           {weather ? (
             <div className="weather--card">
