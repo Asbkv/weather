@@ -1,33 +1,99 @@
 #weather {
   padding: 40px 0;
+
   .weather {
-      &--search {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding-left: 160px;
-        input {
-          width: 350px;
-          border-radius: 10px;
-          border: none;
-          outline: none;
-          border: 1px solid black;
-          background: black;
-          padding: 5px 10px;
-          font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--search {
+      margin-bottom: 50px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-left: 160px;
+
+      input {
+        width: 350px;
+        border-radius: 10px;
+        border: 1px solid black;
+        background: black;
+        padding: 5px 10px;
+        font-size: 22px;
+        color: white;
+
+        &::placeholder {
           color: white;
-          &::placeholder {
-            color: white;
-          }
         }
+      }
+
+      button {
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: none;
+        font-size: 16px;
+        background: blueviolet;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: darkviolet;
+        }
+      }
+
+      @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: stretch;
+        padding-left: 0;
+
+        input {
+          width: 100%;
+          font-size: 18px;
+        }
+
         button {
-          padding: 10px 15px;
-          border-radius: 10px;
-          border: none;
+          width: 100%;
           font-size: 16px;
-          background: blueviolet;
-          color: white;
+        }
+      }
+    }
+
+    &--card {
+      background: #107ddd76;
+      border-radius: 15px;
+      padding: 25px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #444;
+      }
+
+      @media (max-width: 600px) {
+        padding: 20px;
+        h2 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
         }
       }
     }
   }
+}
